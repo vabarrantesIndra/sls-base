@@ -4,6 +4,7 @@ import middy from '@middy/core';
 import httpJsonBodyParser from '@middy/http-json-body-parser';
 import httpErrorHandler from '@middy/http-error-handler';
 import httpEventNormalizer from '@middy/http-event-normalizer';
+import { marshall } from '@aws-sdk/util-dynamodb';
 import createError from 'http-errors';
 
 const client = new DynamoDBClient({region: 'us-east-1'});

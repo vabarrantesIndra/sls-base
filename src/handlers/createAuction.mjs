@@ -19,7 +19,7 @@ async function createAuction(event, context) {
     Item: marshall(auction),
   }));
 
-console.log('dynamoResponse', dynamoResponse);
+console.log('dynamoResponse:', dynamoResponse);
   return {
     statusCode: 200,
     body: JSON.stringify(auction),
